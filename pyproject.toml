@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "docker-dremio-dbt-project"
+version = "0.1.0"
+description = "Projeto com Dremio, dbt e PostgreSQL"
+authors = ["Seu Nome <seuemail@dominio.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+dbt-postgres = "^1.9.0"
+minio = "^7.2.15"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.0"
+black = "^21.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

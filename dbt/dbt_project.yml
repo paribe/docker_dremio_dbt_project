@@ -1,0 +1,10 @@
+name: 'project_name'
+version: '1.0'
+profile: 'default'
+config-version: 2
+
+models:
+  silver:
+    +materialized: table
+  gold:
+    +materialized: table
