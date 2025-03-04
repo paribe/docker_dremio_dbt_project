@@ -80,12 +80,12 @@ default:
   outputs:
     dev:
       type: postgres
-      host: dpg-cv2rncij1k6c739ofhag-a.oregon-postgres.render.com
-      user: banco_dremio_sql_user
-      password: L9py97LBW21AmTKu9C2LwbwIS2ajrPkZ
-      port: 5432
-      dbname: banco_dremio_sql
-      schema: public
+      host: "{{ env_var('DB_HOST') }}"
+      user: "{{ env_var('DB_USER') }}"
+      password: "{{ env_var('DB_PASSWORD') }}"
+      port: "{{ env_var('DB_PORT') | int }}"
+      dbname: "{{ env_var('DB_NAME') }}"
+      schema: "{{ env_var('DB_SCHEMA') }}"
   target: dev
 ```
 
